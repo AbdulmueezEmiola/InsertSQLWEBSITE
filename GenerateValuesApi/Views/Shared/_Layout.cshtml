@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.css" />
+    <link href="~/font-awesome/css/all.min.css" rel="stylesheet"/>
+    <link href="~/lib/StyleSheet.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>        
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">Insert Data Generator</a>
+                <span class="text-right">
+                    <a class="navbar-brand @(ViewData["Location"]=="Generator"?"text-info":"text-white")" asp-area="" asp-controller="Home" asp-action="Index">Generator</a>
+                    <a class="navbar-brand @(ViewData["Location"]=="Documentation"?"text-info":"text-white")" asp-area="" asp-controller="Documentation" asp-action="Index">Documentation</a>
+                </span>
+            </div>
+        </nav>
+    </header>
+    <div class="container" id="container">
+        <main role="main" class="py-3" id="content-wrap">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/jquery/jquery.min.js"></script>
+    <footer class="bg-dark border-top box-shadow mt-3 p-1 text-white ">
+        <span>&copy; @DateTime.Now.Year - Insert Data Generator</span>
+        <span class="float-right mr-2">
+            Connect:
+            <a href="https://twitter.com/EAbdulmueez"><i class="fab fa-twitter text-white"></i></a>
+            <a href="https://medium.com/@@emiolaabdulmueez" class="mx-2"><i class="fab fa-medium text-white"></i></a>
+            <a href="https://github.com/AbdulmueezEmiola"><i class="fab fa-github text-white"></i></a>
+        </span>
+    </footer>
+</body>
+</html>

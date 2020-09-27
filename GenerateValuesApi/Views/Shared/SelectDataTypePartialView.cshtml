@@ -1,0 +1,36 @@
+﻿@model int
+    <select class="form-control" id=@("dataType"+Model) onchange="UpdateOptionColumn(@Model)" name=@("Rows["+Model+"].DataType")>
+        <option selected value="">Choose...</option>
+        <optgroup label="Personal Details">
+            <option>Name</option>
+            <option>Phone</option>
+            <option>Email</option>
+            <option>Passport Number</option>
+        </optgroup>
+        <optgroup label="Adddress">
+            <option>Company</option>
+            <option>Street Address</option>
+            <option>City</option>
+            <option>Country</option>
+            <option>Postal/Zip</option>
+        </optgroup>
+        <optgroup label="Words">
+            <option>Fixed Number Of Words</option>
+            <option>Random Number of Words</option>
+            <option>List of Words</option>
+        </optgroup>
+        <optgroup label="Number/boolean">
+            <option>Boolean</option>
+            <option>AlphaNumeric</option>
+            <option>Numbers</option>
+        </optgroup>
+        <optgroup label="Miscellenous">
+            <option>Date</option>
+            <option>Credit Card</option>
+            <option>Pin</option>
+            <option>CVV</option>
+        </optgroup>
+    </select>
+<script type="text/javascript" src="~/lib/JS/Script.js">
+
+</script>

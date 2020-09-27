@@ -1,0 +1,28 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+    ViewData["Location"] = "Generator";
+}
+<div class="text-center">
+    <a class="btn btn-primary text-center" asp-action="Index" asp-controller="Home">Go back</a>
+    <button class="btn btn-info" type="button" onclick="copyResult()">Copy</button>
+</div>
+
+<div id="Result" class="border border-primary m-3">
+    <ul class="list-group ">
+        @foreach (string value in Model)
+        {
+            <li class="list-group-item border-0">@value</li>
+        }
+    </ul>
+</div>
+
+<div class="text-center">
+    <a class="btn btn-primary text-center" asp-action="Index" asp-controller="Home">Go back</a>
+    <button class="btn btn-info" type="button" onclick="copyResult()">Copy</button>
+</div>
+
+<script type="text/javascript" src="~/lib/JS/Script.js">
+
+</script>
